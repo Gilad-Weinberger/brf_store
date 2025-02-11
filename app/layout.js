@@ -2,7 +2,8 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 
 const rubik = Rubik({
-  subsets: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"], // Specify the desired font weights
+  subsets: ["latin"], // Specify the character subsets
 });
 
 export const metadata = {
@@ -13,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rubik.className}`}>{children}</body>
+      <body className={rubik.className}>{children}</body>
     </html>
   );
 }
