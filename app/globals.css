@@ -19,3 +19,6 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.search-clear-btn::-webkit-search-cancel-button {
+  filter: invert(50%);
+}
